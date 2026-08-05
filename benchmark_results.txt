@@ -1,0 +1,13 @@
+Benchmark Results Template
+
+Original Version Time: ______ seconds
+Optimized Version Time: ______ seconds
+
+Improvement Formula:
+(Original Time - Optimized Time) / Original Time * 100
+
+Example:
+If original = 2.00 seconds and optimized = 0.50 seconds,
+Improvement = 75%
+
+Replace the blanks after running both programs on your system.

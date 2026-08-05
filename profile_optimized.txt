@@ -1,0 +1,23 @@
+         1170600 function calls (1170583 primitive calls) in 0.325 seconds
+
+   Ordered by: cumulative time
+   List reduced from 143 to 15 due to restriction <15>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.325    0.325 c:\Users\Dell\OneDrive\Documents\week4_performance_optimization_project\optimized_app.py:57(main)
+        1    0.044    0.044    0.257    0.257 c:\Users\Dell\OneDrive\Documents\week4_performance_optimization_project\optimized_app.py:10(generate_text)
+    60000    0.016    0.000    0.115    0.000 C:\Users\Dell\AppData\Local\Programs\Python\Python313\Lib\random.py:336(randint)
+    60000    0.041    0.000    0.099    0.000 C:\Users\Dell\AppData\Local\Programs\Python\Python313\Lib\random.py:295(randrange)
+   120000    0.055    0.000    0.085    0.000 C:\Users\Dell\AppData\Local\Programs\Python\Python313\Lib\random.py:245(_randbelow_with_getrandbits)
+    60000    0.031    0.000    0.084    0.000 C:\Users\Dell\AppData\Local\Programs\Python\Python313\Lib\random.py:345(choice)
+        1    0.001    0.001    0.067    0.067 c:\Users\Dell\OneDrive\Documents\week4_performance_optimization_project\optimized_app.py:42(analyze_text_fast)
+        1    0.014    0.014    0.065    0.065 c:\Users\Dell\OneDrive\Documents\week4_performance_optimization_project\optimized_app.py:32(count_words_fast)
+    60000    0.022    0.000    0.042    0.000 c:\Users\Dell\OneDrive\Documents\week4_performance_optimization_project\optimized_app.py:28(normalize_word)
+   183861    0.017    0.000    0.017    0.000 {method 'getrandbits' of '_random.Random' objects}
+   180000    0.015    0.000    0.015    0.000 {built-in method _operator.index}
+   120000    0.013    0.000    0.013    0.000 {method 'bit_length' of 'int' objects}
+    60000    0.011    0.000    0.011    0.000 {method 'strip' of 'str' objects}
+   120043    0.010    0.000    0.010    0.000 {built-in method builtins.len}
+    65021    0.009    0.000    0.009    0.000 {method 'append' of 'list' objects}
+
+
