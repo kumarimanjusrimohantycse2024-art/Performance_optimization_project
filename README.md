@@ -1,60 +1,114 @@
 # Week 4 Performance Optimization in Python
 
-## Project Name
-Word Frequency Analyzer: Original vs Optimized
+A self-contained Python project that demonstrates how to identify performance bottlenecks, optimize code, and compare execution speed before and after improvement.
 
-## Objective
-This project demonstrates how to identify performance bottlenecks in a Python application and improve the code using optimization techniques.
+## Overview
 
-## Files Included
-- `original_app.py` - slow baseline version
-- `optimized_app.py` - faster optimized version
-- `tests.py` - verification tests
-- `profile_baseline.txt` - profiling results of original version
-- `profile_optimized.txt` - profiling results of optimized version
-- `benchmark_results.txt` - time comparison results
+This project uses a **Word Frequency Analyzer** to show the full performance optimization workflow in Python.
+
+It includes:
+- an intentionally slower baseline version,
+- an optimized version with better performance,
+- profiling data,
+- correctness tests,
+- and a detailed optimization report.
+
+## Project Goals
+
+- Build a real Python application with measurable performance issues.
+- Profile the original code to find bottlenecks.
+- Improve the code using efficient Python techniques.
+- Verify that the optimized version produces the same results.
+- Document the before-and-after performance clearly.
+
+## Features
+
+- Generates sample text automatically inside the program.
+- Counts word frequency from large input text.
+- Profiles execution time using `cProfile`.
+- Compares original and optimized versions.
+- Includes automated tests for correctness.
+- Produces a clear report of optimization changes.
+
+## Files in This Repository
+
+- `original_app.py` — baseline implementation with slower logic.
+- `optimized_app.py` — improved version using faster techniques.
+- `tests.py` — checks that both versions produce the same output.
+- `week4_performance_optimization_report.md` — detailed report of the optimization process.
+- `profile_baseline.txt` — profiler output for the original version.
+- `profile_optimized.txt` — profiler output for the optimized version.
+- `benchmark_results.txt` — timing comparison between both versions.
 
 ## How It Works
-The program generates its own sample text, counts word frequencies, finds the top words, and measures execution time.
 
-## Optimization Done
-### Original version
-- Uses manual loops for counting
-- Uses list-based unique word checks
-- Repeats work many times
+### Original Version
+The original code uses:
+- manual loops,
+- repeated comparisons,
+- list-based checks,
+- and redundant processing.
 
-### Optimized version
-- Uses `Counter` for counting
-- Reduces repeated processing
-- Uses faster built-in methods
+This makes it slower when the input becomes large.
+
+### Optimized Version
+The optimized code uses:
+- `collections.Counter`,
+- reduced repeated work,
+- faster data handling,
+- and cleaner logic.
+
+This improves performance while keeping the same result.
 
 ## How to Run
-### Run original version
+
+### Run the original version
 ```bash
 python original_app.py
 ```
 
-### Run optimized version
+### Run the optimized version
 ```bash
 python optimized_app.py
 ```
 
-### Run tests
+### Run the tests
 ```bash
 python tests.py
 ```
 
-## Expected Output
-The optimized version should produce the same result as the original version but run faster.
+## Performance Optimization Summary
 
-## Report Content
-Your report should include:
-- project overview
-- baseline performance analysis
-- bottlenecks found
-- optimization methods used
-- before and after timing results
-- verification of correctness
+The project shows how a Python program can be improved by:
+- identifying slow functions,
+- replacing inefficient loops,
+- using built-in data structures,
+- and measuring the improvement with profiling tools.
 
-## Notes
-This project is self-contained and does not need any external input files.
+## Expected Result
+
+The optimized version should:
+- return the same output as the original version,
+- run faster,
+- and demonstrate better code efficiency.
+
+## Why This Project Is Useful
+
+This project is a good portfolio piece because it shows:
+- Python development skills,
+- performance analysis,
+- algorithm improvement,
+- testing,
+- and professional documentation.
+
+## Author
+
+Created for Week 4 performance optimization task.
+
+---
+
+If you want, I can also make it look even more professional with:
+- badges,
+- a table of contents,
+- emojis,
+- and a cleaner GitHub style layout.
