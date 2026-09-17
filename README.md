@@ -1,114 +1,102 @@
-# Week 4 Performance Optimization in Python
+# Performance Optimization Project (Python)
 
-A self-contained Python project that demonstrates how to identify performance bottlenecks, optimize code, and compare execution speed before and after improvement.
-
-## Overview
-
-This project uses a **Word Frequency Analyzer** to show the full performance optimization workflow in Python.
-
-It includes:
-- an intentionally slower baseline version,
-- an optimized version with better performance,
-- profiling data,
-- correctness tests,
-- and a detailed optimization report.
-
-## Project Goals
-
-- Build a real Python application with measurable performance issues.
-- Profile the original code to find bottlenecks.
-- Improve the code using efficient Python techniques.
-- Verify that the optimized version produces the same results.
-- Document the before-and-after performance clearly.
+Demonstrates a practical optimization workflow by comparing a baseline and optimized word-frequency analyzer while preserving output correctness.
 
 ## Features
 
-- Generates sample text automatically inside the program.
-- Counts word frequency from large input text.
-- Profiles execution time using `cProfile`.
-- Compares original and optimized versions.
-- Includes automated tests for correctness.
-- Produces a clear report of optimization changes.
+- Baseline implementation for word counting: [`original_app.py`](./original_app.py)
+- Optimized implementation using `collections.Counter`: [`optimized_app.py`](./optimized_app.py)
+- Profiling output generation with `cProfile` and `pstats`
+- Correctness checks to ensure both implementations produce equivalent counts: [`tests.py`](./tests.py)
+- Benchmark/profiling artifacts for comparison:
+  - [`benchmark_results.txt`](./benchmark_results.txt)
+  - [`profile_baseline.txt`](./profile_baseline.txt)
+  - [`profile_optimized.txt`](./profile_optimized.txt)
 
-## Files in This Repository
+## Tech Stack
 
-- `original_app.py` — baseline implementation with slower logic.
-- `optimized_app.py` — improved version using faster techniques.
-- `tests.py` — checks that both versions produce the same output.
-- `week4_performance_optimization_report.md` — detailed report of the optimization process.
-- `profile_baseline.txt` — profiler output for the original version.
-- `profile_optimized.txt` — profiler output for the optimized version.
-- `benchmark_results.txt` — timing comparison between both versions.
+- Python 3 (standard library only)
+  - `collections`, `random`, `string`, `time`, `cProfile`, `pstats`
 
-## How It Works
+## Project Structure
 
-### Original Version
-The original code uses:
-- manual loops,
-- repeated comparisons,
-- list-based checks,
-- and redundant processing.
+```text
+.
+├── original_app.py
+├── optimized_app.py
+├── tests.py
+├── benchmark_results.txt
+├── profile_baseline.txt
+└── profile_optimized.txt
+```
 
-This makes it slower when the input becomes large.
+## Prerequisites
 
-### Optimized Version
-The optimized code uses:
-- `collections.Counter`,
-- reduced repeated work,
-- faster data handling,
-- and cleaner logic.
+- Python 3.9+ (Python 3.10+ recommended)
 
-This improves performance while keeping the same result.
+## Installation
 
-## How to Run
+```bash
+git clone https://github.com/kumarimanjusrimohantycse2024-art/Performance_optimization_project.git
+cd Performance_optimization_project
+```
 
-### Run the original version
+No third-party dependencies are required.
+
+## Configuration
+
+This project does not require environment variables or secrets.
+
+You can tune input size by passing `num_sentences` to `generate_text(...)` in the app modules for local experimentation.
+
+## Usage
+
+Run baseline version:
+
 ```bash
 python original_app.py
 ```
 
-### Run the optimized version
+Run optimized version:
+
 ```bash
 python optimized_app.py
 ```
 
-### Run the tests
+Each script prints:
+- total words
+- unique words
+- top words
+- elapsed time
+- profiler output (and writes profiler output to a text file)
+
+## Testing
+
+Run correctness checks:
+
 ```bash
 python tests.py
 ```
 
-## Performance Optimization Summary
+## Troubleshooting
 
-The project shows how a Python program can be improved by:
-- identifying slow functions,
-- replacing inefficient loops,
-- using built-in data structures,
-- and measuring the improvement with profiling tools.
+- **`python: command not found`**: use `python3` instead of `python`.
+- **Unexpected counts**: confirm punctuation/case normalization behavior in [`normalize_word`](./original_app.py) and [`normalize_word`](./optimized_app.py).
+- **Profiler output file not updated**: ensure you have write permission in the repository directory.
 
-## Expected Result
+## CI
 
-The optimized version should:
-- return the same output as the original version,
-- run faster,
-- and demonstrate better code efficiency.
+A GitHub Actions workflow runs `python tests.py` on pushes and pull requests:
+- [`.github/workflows/ci.yml`](./.github/workflows/ci.yml)
 
-## Why This Project Is Useful
+## Contributing
 
-This project is a good portfolio piece because it shows:
-- Python development skills,
-- performance analysis,
-- algorithm improvement,
-- testing,
-- and professional documentation.
+1. Fork the repository
+2. Create a feature branch
+3. Make focused changes with tests
+4. Open a pull request with clear rationale and validation notes
 
-## Author
+## License / Status
 
-Created for Week 4 performance optimization task.
-
----
-
-If you want, I can also make it look even more professional with:
-- badges,
-- a table of contents,
-- emojis,
-- and a cleaner GitHub style layout.
+- **License:** No license file is currently present in this repository.
+- **Status:** Active learning/demo project focused on performance optimization techniques.
